@@ -1,0 +1,287 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'BookStoreUUID'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'BookStoreUUID'
+annotate view ZBSC_BOOKSTORE_01 with
+{
+  @EndUserText.label: 'UUID'
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'UUID'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    label: 'UUID'
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+  UUID;
+  
+  @EndUserText.label: 'BookStoreUUID'
+  @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 20 , 
+    type: #IDENTIFICATION_REFERENCE
+  }, 
+  {
+    label: 'BookItemDetails Items', 
+    id: 'BookItemDetailsItems', 
+    purpose: #STANDARD, 
+    position: 21 , 
+    type: #LINEITEM_REFERENCE, 
+    targetElement: '_BookItemDetails'
+  } ]
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'BookStoreUUID'
+  } ]
+  @UI.lineItem: [ {
+    position: 20 , 
+    label: 'BookStoreUUID'
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]
+  BookStoreUUID;
+  
+  @EndUserText.label: 'BookStoreID'
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'BookStoreID'
+  } ]
+  @UI.lineItem: [ {
+    position: 30 , 
+    label: 'BookStoreID'
+  } ]
+  @UI.selectionField: [ {
+    position: 30 
+  } ]
+  BookStoreID;
+  
+  @EndUserText.label: 'Title'
+  @UI.identification: [ {
+    position: 40 , 
+    label: 'Title'
+  } ]
+  @UI.lineItem: [ {
+    position: 40 , 
+    label: 'Title'
+  } ]
+  @UI.selectionField: [ {
+    position: 40 
+  } ]
+  Title;
+  
+  @EndUserText.label: 'Author'
+  @UI.identification: [ {
+    position: 50 , 
+    label: 'Author'
+  } ]
+  @UI.lineItem: [ {
+    position: 50 , 
+    label: 'Author'
+  } ]
+  @UI.selectionField: [ {
+    position: 50 
+  } ]
+  Author;
+  
+  @EndUserText.label: 'Price'
+  @UI.identification: [ {
+    position: 60 , 
+    label: 'Price'
+  } ]
+  @UI.lineItem: [ {
+    position: 60 , 
+    label: 'Price'
+  } ]
+  @UI.selectionField: [ {
+    position: 60 
+  } ]
+  Price;
+  
+  @EndUserText.label: 'PublishedDate'
+  @UI.identification: [ {
+    position: 70 , 
+    label: 'PublishedDate'
+  } ]
+  @UI.lineItem: [ {
+    position: 70 , 
+    label: 'PublishedDate'
+  } ]
+  @UI.selectionField: [ {
+    position: 70 
+  } ]
+  PublishedDate;
+  
+  @EndUserText.label: 'Stock'
+  @UI.identification: [ {
+    position: 80 , 
+    label: 'Stock'
+  } ]
+  @UI.lineItem: [ {
+    position: 80 , 
+    label: 'Stock'
+  } ]
+  @UI.selectionField: [ {
+    position: 80 
+  } ]
+  Stock;
+  
+  @EndUserText.label: 'DiscountedPrice'
+  @UI.identification: [ {
+    position: 90 , 
+    label: 'DiscountedPrice'
+  } ]
+  @UI.lineItem: [ {
+    position: 90 , 
+    label: 'DiscountedPrice'
+  } ]
+  @UI.selectionField: [ {
+    position: 90 
+  } ]
+  DiscountedPrice;
+  
+  @EndUserText.label: 'BookAge'
+  @UI.identification: [ {
+    position: 100 , 
+    label: 'BookAge'
+  } ]
+  @UI.lineItem: [ {
+    position: 100 , 
+    label: 'BookAge'
+  } ]
+  @UI.selectionField: [ {
+    position: 100 
+  } ]
+  BookAge;
+  
+  @EndUserText.label: 'CreatedBy'
+  @UI.identification: [ {
+    position: 110 , 
+    label: 'CreatedBy'
+  } ]
+  @UI.lineItem: [ {
+    position: 110 , 
+    label: 'CreatedBy'
+  } ]
+  @UI.selectionField: [ {
+    position: 110 
+  } ]
+  CreatedBy;
+  
+  @EndUserText.label: 'CreatedAt'
+  @UI.identification: [ {
+    position: 120 , 
+    label: 'CreatedAt'
+  } ]
+  @UI.lineItem: [ {
+    position: 120 , 
+    label: 'CreatedAt'
+  } ]
+  @UI.selectionField: [ {
+    position: 120 
+  } ]
+  CreatedAt;
+  
+  @EndUserText.label: 'UpdatedBy'
+  @UI.identification: [ {
+    position: 130 , 
+    label: 'UpdatedBy'
+  } ]
+  @UI.lineItem: [ {
+    position: 130 , 
+    label: 'UpdatedBy'
+  } ]
+  @UI.selectionField: [ {
+    position: 130 
+  } ]
+  UpdatedBy;
+  
+  @EndUserText.label: 'UpdatedAt'
+  @UI.identification: [ {
+    position: 140 , 
+    label: 'UpdatedAt'
+  } ]
+  @UI.lineItem: [ {
+    position: 140 , 
+    label: 'UpdatedAt'
+  } ]
+  @UI.selectionField: [ {
+    position: 140 
+  } ]
+  UpdatedAt;
+  
+  @UI.identification: [ {
+    position: 150 
+  } ]
+  @UI.lineItem: [ {
+    position: 150 
+  } ]
+  @UI.selectionField: [ {
+    position: 150 
+  } ]
+  LocalCreatedBy;
+  
+  @UI.identification: [ {
+    position: 160 
+  } ]
+  @UI.lineItem: [ {
+    position: 160 
+  } ]
+  @UI.selectionField: [ {
+    position: 160 
+  } ]
+  LocalCreatedAt;
+  
+  @UI.identification: [ {
+    position: 170 
+  } ]
+  @UI.lineItem: [ {
+    position: 170 
+  } ]
+  @UI.selectionField: [ {
+    position: 170 
+  } ]
+  LocalLastChangedBy;
+  
+  @UI.identification: [ {
+    position: 180 
+  } ]
+  @UI.lineItem: [ {
+    position: 180 
+  } ]
+  @UI.selectionField: [ {
+    position: 180 
+  } ]
+  LocalLastChangedAt;
+  
+  @UI.identification: [ {
+    position: 190 
+  } ]
+  @UI.lineItem: [ {
+    position: 190 
+  } ]
+  @UI.selectionField: [ {
+    position: 190 
+  } ]
+  LastChangedAt;
+  
+  @EndUserText.label: '_BaseEntity'
+  @UI.identification: [ {
+    position: 210 , 
+    label: '_BaseEntity'
+  } ]
+  @UI.lineItem: [ {
+    position: 210 , 
+    label: '_BaseEntity'
+  } ]
+  @UI.selectionField: [ {
+    position: 210 
+  } ]
+  _BaseEntity;
+}

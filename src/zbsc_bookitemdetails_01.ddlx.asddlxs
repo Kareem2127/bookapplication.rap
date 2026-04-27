@@ -1,0 +1,98 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'BookItemUUID'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'BookItemUUID'
+annotate view ZBSC_BOOKITEMDETAILS_01 with
+{
+  @EndUserText.label: 'UUID'
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'UUID'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    label: 'UUID'
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+  UUID;
+  
+  @EndUserText.label: 'ParentUUID'
+  @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 20 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'ParentUUID'
+  } ]
+  @UI.lineItem: [ {
+    position: 20 , 
+    label: 'ParentUUID'
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]
+  ParentUUID;
+  
+  @EndUserText.label: 'BookItemUUID'
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'BookItemUUID'
+  } ]
+  @UI.lineItem: [ {
+    position: 30 , 
+    label: 'BookItemUUID'
+  } ]
+  @UI.selectionField: [ {
+    position: 30 
+  } ]
+  BookItemUUID;
+  
+  @EndUserText.label: 'ChapterName'
+  @UI.identification: [ {
+    position: 40 , 
+    label: 'ChapterName'
+  } ]
+  @UI.lineItem: [ {
+    position: 40 , 
+    label: 'ChapterName'
+  } ]
+  @UI.selectionField: [ {
+    position: 40 
+  } ]
+  ChapterName;
+  
+  @EndUserText.label: 'PageCount'
+  @UI.identification: [ {
+    position: 50 , 
+    label: 'PageCount'
+  } ]
+  @UI.lineItem: [ {
+    position: 50 , 
+    label: 'PageCount'
+  } ]
+  @UI.selectionField: [ {
+    position: 50 
+  } ]
+  PageCount;
+  
+  @EndUserText.label: '_BaseEntity'
+  @UI.identification: [ {
+    position: 70 , 
+    label: '_BaseEntity'
+  } ]
+  @UI.lineItem: [ {
+    position: 70 , 
+    label: '_BaseEntity'
+  } ]
+  @UI.selectionField: [ {
+    position: 70 
+  } ]
+  _BaseEntity;
+}

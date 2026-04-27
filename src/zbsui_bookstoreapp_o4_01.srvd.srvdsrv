@@ -1,0 +1,12 @@
+@EndUserText: {
+  label: 'Service Definition for ZBSC_BOOKSTORE_01'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZBSC_BOOKSTORE_01'
+  }
+}
+define service ZBSUI_BOOKSTOREAPP_O4_01 provider contracts odata_v4_ui {
+  expose ZBSC_BOOKSTORE_01 as BookStore;
+  expose ZBSC_BOOKITEMDETAILS_01 as BookItemDetails;
+}

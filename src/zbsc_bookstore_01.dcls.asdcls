@@ -1,0 +1,6 @@
+@EndUserText.label: 'ZBSC_BOOKSTORE_01'
+@MappingRole: true
+define role ZBSC_BOOKSTORE_01 {
+  grant select on ZBSC_BOOKSTORE_01
+  where INHERITING CONDITIONS FROM ENTITY ZBSR_BOOKSTORE_01 REPLACING { ROOT WITH _BaseEntity };
+}

@@ -1,0 +1,93 @@
+managed implementation in class ZBSBP_R_BOOKSTORE_01 unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZBSR_BOOKSTORE_01 alias BookStore
+persistent table ZBSBOOKSTORE_01
+extensible
+draft table ZBSBOKSTORE_D_01
+etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+{
+  field ( readonly )
+   UUID,
+   LocalCreatedBy,
+   LocalCreatedAt,
+   LocalLastChangedBy,
+   LocalLastChangedAt,
+   LastChangedAt;
+
+  field ( numbering : managed )
+   UUID;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZBSBOOKSTORE_01 corresponding extensible
+  {
+    UUID = UUID;
+    BookStoreUUID = BOOK_STORE_UUID;
+    BookStoreID = BOOK_STORE_ID;
+    Title = TITLE;
+    Author = AUTHOR;
+    Price = PRICE;
+    PriceCurr = PRICE_CURR;
+    PublishedDate = PUBLISHED_DATE;
+    Stock = STOCK;
+    DiscountedPrice = DISCOUNTED_PRICE;
+    BookAge = BOOK_AGE;
+    CreatedBy = CREATED_BY;
+    CreatedAt = CREATED_AT;
+    UpdatedBy = UPDATED_BY;
+    UpdatedAt = UPDATED_AT;
+    LocalCreatedBy = LOCAL_CREATED_BY;
+    LocalCreatedAt = LOCAL_CREATED_AT;
+    LocalLastChangedBy = LOCAL_LAST_CHANGED_BY;
+    LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+    LastChangedAt = LAST_CHANGED_AT;
+  }
+
+  association _BookItemDetails { create; with draft; }
+
+}
+
+define behavior for ZBSR_BOOKITEMDETAILS_01 alias BookItemDetails
+persistent table ZBSBKTMDTAILS_01
+extensible
+draft table ZBSBKTMDTLS_D_01
+etag dependent by _BookStore
+lock dependent by _BookStore
+authorization dependent by _BookStore
+{
+  field ( readonly )
+   UUID,
+   ParentUUID;
+
+  field ( numbering : managed )
+   UUID;
+
+
+  update;
+  delete;
+
+  mapping for ZBSBKTMDTAILS_01 corresponding extensible
+  {
+    UUID = UUID;
+    ParentUUID = PARENT_UUID;
+    BookItemUUID = BOOK_ITEM_UUID;
+    ChapterName = CHAPTER_NAME;
+    PageCount = PAGE_COUNT;
+  }
+
+  association _BookStore { with draft; }
+
+}

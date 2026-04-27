@@ -1,0 +1,33 @@
+projection implementation in class ZBSBP_C_BOOKSTORE_01 unique;
+strict ( 2 );
+extensible;
+use draft;
+use side effects;
+define behavior for ZBSC_BOOKSTORE_01 alias BookStore
+extensible
+use etag
+{
+  use create;
+  use update;
+  use delete;
+
+  use action Edit;
+  use action Activate;
+  use action Discard;
+  use action Resume;
+  use action Prepare;
+
+  use association _BookItemDetails { create; with draft; }
+
+}
+
+define behavior for ZBSC_BOOKITEMDETAILS_01 alias BookItemDetails
+extensible
+use etag
+{
+  use update;
+  use delete;
+
+  use association _BookStore { with draft; }
+
+}
